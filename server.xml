@@ -1,0 +1,5 @@
+<server description="Hello World Server">
+    <httpEndpoint id="defaultHttpEndpoint" host="*" port="9080" />
+    <webApplication id="helloWorld" location="hello-world.war" name="hello-world" />
+</server>
+
