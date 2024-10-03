@@ -40,3 +40,7 @@ jobs:
       - name: Push Docker image
         run: |
           docker push srikanth05061988/hello-world-liberty:latest
+      - name: Run Docker Container
+        run: |
+          docker run --name hello-world-liberty -d srikanth05061988/hello-world-liberty:latest
+          docker ps
