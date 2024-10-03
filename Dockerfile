@@ -4,7 +4,7 @@ FROM ibmcom/websphere-liberty:latest
 COPY server.xml /config/
 
 # Copy the generated WAR file
-COPY target/hello-world.war /config/apps/
+COPY target/hello-world-1.0-SNAPSHOT.war /config/apps/
 
 # Expose the port
 EXPOSE 9080
