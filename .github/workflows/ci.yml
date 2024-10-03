@@ -27,3 +27,4 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t hello-world-liberty .
+          docker images
