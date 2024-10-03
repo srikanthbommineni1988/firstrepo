@@ -37,3 +37,6 @@ jobs:
       - name: Tag Docker image
         run: |
           docker tag hello-world-liberty srikanth05061988/hello-world-liberty:latest
+      - name: Push Docker image
+        run: |
+          docker push srikanth05061988/hello-world-liberty:latest
