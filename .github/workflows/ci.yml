@@ -30,8 +30,8 @@ jobs:
           docker images
       - name: Log in to Docker Registry
         env:
-          REGISTRY: srikanth05061988/hello-world-liberty  # e.g., 'docker.io' for Docker Hub
+          REGISTRY: hub.docker.com/repository/docker/srikanth05061988/hello-world-liberty/general  # e.g., 'docker.io' for Docker Hub
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
-          echo $DOCKER_PASSWORD | docker login srikanth05061988/hello-world-liberty --username $DOCKER_USERNAME --password-stdin
+          echo $DOCKER_PASSWORD | docker login hub.docker.com/repository/docker/srikanth05061988/hello-world-liberty/general --username $DOCKER_USERNAME --password-stdin
