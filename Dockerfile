@@ -1,4 +1,4 @@
-FROM ibmcom/websphere-liberty:full
+FROM ibmcom/websphere-liberty:latest
 
 # Copy the server configuration
 COPY server.xml /config/
