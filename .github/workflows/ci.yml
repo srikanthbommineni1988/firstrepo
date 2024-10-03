@@ -28,3 +28,10 @@ jobs:
         run: |
           docker build -t hello-world-liberty .
           docker images
+      - name: Log in to Docker Registry
+        env:
+          REGISTRY: srikanth05061988/myfirstrepo  # e.g., 'docker.io' for Docker Hub
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          echo $DOCKER_PASSWORD | docker login $REGISTRY --username $DOCKER_USERNAME --password-stdin
