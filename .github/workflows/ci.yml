@@ -23,3 +23,7 @@ jobs:
 
       - name: Build WAR file
         run: mvn clean package
+
+      - name: Build Docker image
+        run: |
+          docker build -t hello-world-liberty .
