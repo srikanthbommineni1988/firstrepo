@@ -1,0 +1,22 @@
+name: Build and Deploy to OpenShift
+
+on:
+  push:
+    branches:
+      - main  # Change this to your default branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '11'  # Adjust as needed
+
+      - name: Build WAR file
+        run: mvn clean package
